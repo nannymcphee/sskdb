@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'shealthcare' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for shealthcare
+
+	pod 'Alamofire', '~> 4.7'
+    pod 'CryptoSwift'
+    pod 'SwiftyXMLParser', :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
+    pod 'MKProgress', :git => 'https://github.com/kamirana4/MKProgress.git'
+    pod 'GoneVisible'
+    pod 'HcdDateTimePicker'
+    pod 'MBRadioCheckboxButton'
+    pod 'MBCircularProgressBar'
+    pod 'ActionKit', '~> 2.5.1'
+
+end
