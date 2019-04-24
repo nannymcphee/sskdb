@@ -1,7 +1,10 @@
 PODS:
   - ActionKit (2.5.1)
-  - Alamofire (4.8.2)
-  - CryptoSwift (1.0.0)
+  - Alamofire (4.8.1)
+  - CollectionKit (2.3.0):
+    - CollectionKit/Core (= 2.3.0)
+  - CollectionKit/Core (2.3.0)
+  - CryptoSwift (0.14.0)
   - GoneVisible (1.2.0)
   - HcdDateTimePicker (1.1.1)
   - MBCircularProgressBar (0.3.5)
@@ -12,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - ActionKit (~> 2.5.1)
   - Alamofire (~> 4.7)
+  - CollectionKit
   - CryptoSwift
   - GoneVisible
   - HcdDateTimePicker
@@ -24,6 +28,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActionKit
     - Alamofire
+    - CollectionKit
     - CryptoSwift
     - GoneVisible
     - HcdDateTimePicker
@@ -46,8 +51,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ActionKit: 6f4f5fbab3a76aa05e8df8d66145db4fe9e9b8df
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  CollectionKit: 6910479bf865bfe49040e73322ce4b8fe8991231
+  CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
   GoneVisible: c552940cd9df7548427f6bffd000dcbcc6de187f
   HcdDateTimePicker: 187736981f667f699d4d8d6ccc21621b55a6edb8
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
@@ -55,6 +61,6 @@ SPEC CHECKSUMS:
   MKProgress: 4fa8dd701b872c82b780c885d577f99c8848d584
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
 
-PODFILE CHECKSUM: 338af3b5425b373a6ac95092ea82ddd9275abafe
+PODFILE CHECKSUM: f8b216d69df2bec4febae41d0aa6e4cdfdfe9843
 
 COCOAPODS: 1.6.1

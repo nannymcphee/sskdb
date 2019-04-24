@@ -14,6 +14,147 @@ private var __object = [UIView: Any]()
 
 extension UIView {
     
+    func customRounded(border: CGFloat, color: UIColor) {
+        self.layer.borderWidth = border
+        self.layer.masksToBounds = false
+        self.layer.borderColor = color.cgColor
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
+    
+    func customBorder(cornerRadius: CGFloat, borderWidth: CGFloat, color: UIColor) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = color.cgColor
+        self.layer.masksToBounds = true
+        self.clipsToBounds = true
+    }
+    
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
+    
+    func roundCorners(_ corners: UIRectCorner,_ cornerMask: CACornerMask, radius: CGFloat) {
+        if #available(iOS 11.0, *) {
+            self.clipsToBounds = true
+            self.layer.cornerRadius = radius
+            self.layer.maskedCorners = cornerMask
+        } else {
+            self.clipsToBounds = true
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = self.frame
+            rectShape.position = self.center
+            rectShape.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+            self.layer.mask = rectShape
+        }
+    }
+    
+    func layerGradientVertical(color1: UIColor, color2: UIColor) {
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [color1.cgColor, color2.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+        
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func layerGradientHorizontal(color1: UIColor, color2: UIColor) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [color1.cgColor, color2.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = bounds
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func layerGradientHorizontal(colors: [UIColor]) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colors.compactMap({$0.cgColor})
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = bounds
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    // retrieves all constraints that mention the view
+    func getAllConstraints() -> [NSLayoutConstraint] {
+        
+        // array will contain self and all superviews
+        var views = [self]
+        
+        // get all superviews
+        var view = self
+        while let superview = view.superview {
+            views.append(superview)
+            view = superview
+        }
+        
+        // transform views to constraints and filter only those
+        // constraints that include the view itself
+        return views.flatMap({ $0.constraints }).filter { constraint in
+            return constraint.firstItem as? UIView == self ||
+                constraint.secondItem as? UIView == self
+        }
+    }
+    
+    // Example 1: Get all width constraints involving this view
+    // We could have multiple constraints involving width, e.g.:
+    // - two different width constraints with the exact same value
+    // - this view's width equal to another view's width
+    // - another view's height equal to this view's width (this view mentioned 2nd)
+    func getWidthConstraints() -> [NSLayoutConstraint] {
+        return getAllConstraints().filter( {
+            ($0.firstAttribute == .width && $0.firstItem as? UIView == self) ||
+                ($0.secondAttribute == .width && $0.secondItem as? UIView == self)
+        } )
+    }
+    
+    // Example 2: Change width constraint(s) of this view to a specific value
+    // Make sure that we are looking at an equality constraint (not inequality)
+    // and that the constraint is not against another view
+    func changeWidth(to value: CGFloat) {
+        
+        getAllConstraints().filter( {
+            $0.firstAttribute == .width &&
+                $0.relation == .equal &&
+                $0.secondAttribute == .notAnAttribute
+        } ).forEach( {$0.constant = value })
+    }
+    
+    func changeSize(to value: CGFloat) {
+        changeWidth(to: value)
+        changeHeight(to: value)
+    }
+    
+    // Example 3: Change leading constraints only where this view is
+    // mentioned first. We could also filter leadingMargin, left, or leftMargin
+    func changeLeading(to value: CGFloat) {
+        getAllConstraints().filter( {
+            $0.firstAttribute == .leading &&
+                $0.firstItem as? UIView == self
+        }).forEach({$0.constant = value})
+    }
+    
+    func getHeightConstraints() -> [NSLayoutConstraint] {
+        return getAllConstraints().filter( {
+            ($0.firstAttribute == .height && $0.firstItem as? UIView == self) ||
+                ($0.secondAttribute == .height && $0.secondItem as? UIView == self)
+        } )
+    }
+    
+    func changeHeight(to value: CGFloat) {
+        getAllConstraints().filter( {
+            $0.firstAttribute == .height &&
+                $0.relation == .equal &&
+                $0.secondAttribute == .notAnAttribute
+        } ).forEach( {$0.constant = value })
+    }
+    
     var object: Any? {
         get {
             guard let l = __object[self] else {

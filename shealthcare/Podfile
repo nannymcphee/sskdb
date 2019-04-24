@@ -16,5 +16,6 @@ target 'shealthcare' do
     pod 'MBRadioCheckboxButton'
     pod 'MBCircularProgressBar'
     pod 'ActionKit', '~> 2.5.1'
+    pod 'CollectionKit'
 
 end

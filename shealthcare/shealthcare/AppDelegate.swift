@@ -20,7 +20,8 @@ extension Notification.Name {
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
+    var rootViewController: UIViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -41,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         sleep(2)
+        
+        setupRootVC()
         
         // 쿠키 모든 사이트에서 허용.
         HTTPCookieStorage.shared.cookieAcceptPolicy = HTTPCookie.AcceptPolicy.always
@@ -70,6 +73,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         registeredForRemoteNotifications(application: application)
         
         return true
+    }
+    
+    fileprivate func setupRootVC() {
+        rootViewController = MainMenuViewController()
+        navigationController = UINavigationController(rootViewController: rootViewController!)
+        navigationController?.isNavigationBarHidden = true
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+//        if Auth.auth().currentUser?.uid != nil {
+//            let mainVC = MainViewController()
+//            rootViewController = LoginViewController()
+//            navigationController = UINavigationController(rootViewController: rootViewController!)
+//            navigationController?.pushViewController(mainVC, animated: false)
+//            navigationController?.isNavigationBarHidden = true
+//
+//            window = UIWindow(frame: UIScreen.main.bounds)
+//            window?.rootViewController = navigationController
+//            window?.makeKeyAndVisible()
+//        } else {
+//            rootViewController = LoginViewController()
+//            navigationController = UINavigationController(rootViewController: rootViewController!)
+//            navigationController?.isNavigationBarHidden = true
+//
+//            window = UIWindow(frame: UIScreen.main.bounds)
+//            window?.rootViewController = navigationController
+//            window?.makeKeyAndVisible()
+//        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

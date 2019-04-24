@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		10AA59C62A6D81A0EACD7538 /* Pods_shealthcare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C95D31F539CDA10013C4B1B /* Pods_shealthcare.framework */; };
+		E116A5612267634800013439 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A55F2267634800013439 /* MainMenuViewController.swift */; };
+		E116A5622267634800013439 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E116A5602267634800013439 /* MainMenuViewController.xib */; };
+		E116A566226763A300013439 /* MainMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A564226763A300013439 /* MainMenuCollectionViewCell.swift */; };
+		E116A567226763A300013439 /* MainMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E116A565226763A300013439 /* MainMenuCollectionViewCell.xib */; };
+		E116A56A2267678500013439 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A5692267678500013439 /* Device.swift */; };
+		E116A56C226767B500013439 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A56B226767B500013439 /* AppConstants.swift */; };
+		E116A56E2267680300013439 /* EX_Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A56D2267680300013439 /* EX_Optional.swift */; };
+		E116A57022676DEC00013439 /* MenuCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E116A56F22676DEC00013439 /* MenuCollectionViewLayout.swift */; };
+		E1387625226AC1510082284F /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1387624226AC1510082284F /* MenuManager.swift */; };
+		E1387628226AC3320082284F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1387627226AC3320082284F /* MenuItem.swift */; };
 		EF11A9D52260C3CE00C3D417 /* EX_GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF11A9D42260C3CE00C3D417 /* EX_GestureRecognizer.swift */; };
 		EF301CCE2258A304008B5376 /* NotiSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF301CCD2258A304008B5376 /* NotiSettingViewController.swift */; };
 		EF301CD02258A97D008B5376 /* Neat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF301CCF2258A97D008B5376 /* Neat.swift */; };
@@ -214,6 +224,16 @@
 		2CEE1596079A9AC98E6A1695 /* Pods-shealthcare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shealthcare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shealthcare/Pods-shealthcare.debug.xcconfig"; sourceTree = "<group>"; };
 		53D0065889AC4779F0657663 /* Pods-shealthcare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shealthcare.release.xcconfig"; path = "Pods/Target Support Files/Pods-shealthcare/Pods-shealthcare.release.xcconfig"; sourceTree = "<group>"; };
 		8C95D31F539CDA10013C4B1B /* Pods_shealthcare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shealthcare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E116A55F2267634800013439 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		E116A5602267634800013439 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		E116A564226763A300013439 /* MainMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		E116A565226763A300013439 /* MainMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		E116A5692267678500013439 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		E116A56B226767B500013439 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E116A56D2267680300013439 /* EX_Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EX_Optional.swift; sourceTree = "<group>"; };
+		E116A56F22676DEC00013439 /* MenuCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewLayout.swift; sourceTree = "<group>"; };
+		E1387624226AC1510082284F /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		E1387627226AC3320082284F /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		EF11A9D42260C3CE00C3D417 /* EX_GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EX_GestureRecognizer.swift; sourceTree = "<group>"; };
 		EF301CCD2258A304008B5376 /* NotiSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiSettingViewController.swift; sourceTree = "<group>"; };
 		EF301CCF2258A97D008B5376 /* Neat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neat.swift; sourceTree = "<group>"; };
@@ -450,6 +470,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E116A55D2267632E00013439 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E116A5632267638800013439 /* Cells */,
+				E116A55E2267633600013439 /* MainMenuViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E116A55E2267633600013439 /* MainMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E116A55F2267634800013439 /* MainMenuViewController.swift */,
+				E116A5602267634800013439 /* MainMenuViewController.xib */,
+				E116A56F22676DEC00013439 /* MenuCollectionViewLayout.swift */,
+			);
+			path = MainMenuViewController;
+			sourceTree = "<group>";
+		};
+		E116A5632267638800013439 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E116A564226763A300013439 /* MainMenuCollectionViewCell.swift */,
+				E116A565226763A300013439 /* MainMenuCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E116A5682267676600013439 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E116A5692267678500013439 /* Device.swift */,
+				E116A56B226767B500013439 /* AppConstants.swift */,
+				E1387624226AC1510082284F /* MenuManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E1387626226AC3200082284F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1387627226AC3320082284F /* MenuItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EF45E31D22439E2E005847D0 /* Drug */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,10 +586,13 @@
 		EF8753482232311F0054525D /* shealthcare */ = {
 			isa = PBXGroup;
 			children = (
+				E1387626226AC3200082284F /* Models */,
 				EF501C16223B350700407CAD /* shealthcare.entitlements */,
+				E116A5682267676600013439 /* Helpers */,
 				EF8753792237461E0054525D /* Commons */,
 				EF8753612235ED330054525D /* Extension */,
 				EF8753602235ED200054525D /* Classes */,
+				E116A55D2267632E00013439 /* Views */,
 				EF8753492232311F0054525D /* AppDelegate.swift */,
 				EF87534D2232311F0054525D /* Main.storyboard */,
 				EF5AB482223A1D51003EEE6C /* Login.storyboard */,
@@ -615,6 +684,7 @@
 				EF4E31CF225716C60037AB9C /* EX_NSLayoutConstraint.swift */,
 				EF4E31D1225725B80037AB9C /* EX_NSNumber.swift */,
 				EF11A9D42260C3CE00C3D417 /* EX_GestureRecognizer.swift */,
+				E116A56D2267680300013439 /* EX_Optional.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1005,12 +1075,14 @@
 			files = (
 				EF5AB483223A1D51003EEE6C /* Login.storyboard in Resources */,
 				EF4E31CB2256F6010037AB9C /* Walking.storyboard in Resources */,
+				E116A567226763A300013439 /* MainMenuCollectionViewCell.xib in Resources */,
 				EF8753542232311F0054525D /* LaunchScreen.storyboard in Resources */,
 				EFD216A822437B6500DDF74C /* Drug.storyboard in Resources */,
 				EFEA0A582251EB49002B97D8 /* Glasses.storyboard in Resources */,
 				EF66BFC7223F263400E394FB /* Weight.storyboard in Resources */,
 				EF98FBA72240D76F00145040 /* Vertebra.storyboard in Resources */,
 				EF501C1A223B7D4800407CAD /* Assets.xcassets in Resources */,
+				E116A5622267634800013439 /* MainMenuViewController.xib in Resources */,
 				EF87534F2232311F0054525D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1117,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-shealthcare/Pods-shealthcare-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ActionKit/ActionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CollectionKit/CollectionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoneVisible/GoneVisible.framework",
 				"${BUILT_PRODUCTS_DIR}/HcdDateTimePicker/HcdDateTimePicker.framework",
@@ -1057,6 +1130,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoneVisible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HcdDateTimePicker.framework",
@@ -1128,11 +1202,13 @@
 				EF98FB4B223FDE5200145040 /* CombinedChartView.swift in Sources */,
 				EF98FB47223FDE5200145040 /* CandleStickChartView.swift in Sources */,
 				EF98FB6F223FDE5200145040 /* AnimatedZoomViewJob.swift in Sources */,
+				E116A57022676DEC00013439 /* MenuCollectionViewLayout.swift in Sources */,
 				EF98FB72223FDE5200145040 /* ZoomViewJob.swift in Sources */,
 				EF45E3292243B509005847D0 /* IB_UIButton.swift in Sources */,
 				EF98FB4F223FDE5200145040 /* PieRadarChartViewBase.swift in Sources */,
 				EF4E31D0225716C60037AB9C /* EX_NSLayoutConstraint.swift in Sources */,
 				EF98FB31223FDE5200145040 /* IShapeRenderer.swift in Sources */,
+				E116A566226763A300013439 /* MainMenuCollectionViewCell.swift in Sources */,
 				EF4E31D2225725B80037AB9C /* EX_NSNumber.swift in Sources */,
 				EF66BFCA223F2A6300E394FB /* WeightViewController.swift in Sources */,
 				EF98FB90223FDE5200145040 /* LineScatterCandleRadarChartDataSet.swift in Sources */,
@@ -1165,6 +1241,7 @@
 				EF98FB8A223FDE5200145040 /* PieChartData.swift in Sources */,
 				EF45E3252243AC08005847D0 /* DrugAddViewController.swift in Sources */,
 				EF98FB66223FDE5200145040 /* MarkerImage.swift in Sources */,
+				E116A56E2267680300013439 /* EX_Optional.swift in Sources */,
 				EF875389223776140054525D /* EX_CGFloat.swift in Sources */,
 				EF98FB50223FDE5200145040 /* BarChartView.swift in Sources */,
 				EF98FB87223FDE5200145040 /* ChartDataSet.swift in Sources */,
@@ -1190,6 +1267,7 @@
 				EF98FB95223FDE5200145040 /* IRadarChartDataSet.swift in Sources */,
 				EF98FB85223FDE5200145040 /* PieChartDataSet.swift in Sources */,
 				EF98FB27223FDE5200145040 /* ScatterChartRenderer.swift in Sources */,
+				E1387625226AC1510082284F /* MenuManager.swift in Sources */,
 				EF4E31CE2256F7BF0037AB9C /* WalkingViewController.swift in Sources */,
 				EF98FB5C223FDE5200145040 /* Fill.swift in Sources */,
 				EF98FB79223FDE5200145040 /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */,
@@ -1213,6 +1291,7 @@
 				EF33106F2237B7D300A50FF7 /* GuideViewController.swift in Sources */,
 				EF11A9D52260C3CE00C3D417 /* EX_GestureRecognizer.swift in Sources */,
 				EF87537E22374B010054525D /* FindIdPwdViewController.swift in Sources */,
+				E116A56C226767B500013439 /* AppConstants.swift in Sources */,
 				EF98FBA2223FDE5200145040 /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
 				EF501139223A4CD200FF2141 /* MypageEditViewController.swift in Sources */,
 				EF98FB98223FDE5200145040 /* IChartDataSet.swift in Sources */,
@@ -1234,6 +1313,7 @@
 				EF98FB57223FDE5200145040 /* DefaultValueFormatter.swift in Sources */,
 				EF5AB47B22389D2C003EEE6C /* MypageViewController.swift in Sources */,
 				EF98FB96223FDE5200145040 /* IBarChartDataSet.swift in Sources */,
+				E116A56A2267678500013439 /* Device.swift in Sources */,
 				EF98FB67223FDE5200145040 /* Legend.swift in Sources */,
 				EF98FB4E223FDE5200145040 /* BubbleChartView.swift in Sources */,
 				EF535FA12255C4C200EFAA85 /* GuidePopupViewController.swift in Sources */,
@@ -1261,10 +1341,12 @@
 				EF98FB30223FDE5200145040 /* ChevronDownShapeRenderer.swift in Sources */,
 				EF535FA52255E08F00EFAA85 /* TermPopupViewController.swift in Sources */,
 				EF301CCE2258A304008B5376 /* NotiSettingViewController.swift in Sources */,
+				E116A5612267634800013439 /* MainMenuViewController.swift in Sources */,
 				EF87537C223746520054525D /* DefineEnum.swift in Sources */,
 				EF98FBA3223FDE5200145040 /* ScatterChartDataProvider.swift in Sources */,
 				EFA6F4492253398A002E5D24 /* DrugMarkSelectViewController.swift in Sources */,
 				EF98FB43223FDE5200145040 /* Range.swift in Sources */,
+				E1387628226AC3320082284F /* MenuItem.swift in Sources */,
 				EF98FB5F223FDE5200145040 /* Platform+Accessibility.swift in Sources */,
 				EF98FB8C223FDE5200145040 /* LineChartDataSet.swift in Sources */,
 			);
